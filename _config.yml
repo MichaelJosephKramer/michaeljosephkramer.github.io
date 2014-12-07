@@ -1,14 +1,24 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Michael Joseph Kramer
+email: michael@sage.house
+bio: &bio >
+  <p>Michael Joseph Kramer is a passionate software developer focusing on quality, testing, and agile practices. He's currently working with Ruby and JavaScript.</p><p>Michael is located in Columbus, OH.</p>
+description: *bio
+baseurl: ""
+url: "http://michaeljosephkramer.com"
+encoding: utf-8
+twitter_username: michaelkramer
+github_username:  michaeljosephkramer
+linkedin_username:  michaeljosephkramer
+facebook_username:  michaeljosephkramer
+feedburner_username:  michaeljosephkramer
+disqus_username:  michaeljosephkramer
+google_analytics_id: UA-592651-4
+clicky_id: 66487006
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+highligher: rouge
+permalink: pretty
+redcarpet:
+  extensions: [smart]
