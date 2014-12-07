@@ -1,0 +1,219 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@import 'syntax-highlighting';
+
+//colors
+$color_suva_gray_approx: #888;
+$color_blaze_orange_approx: #ff6600;
+$black: black;
+
+//fonts
+$font_0: Cabin;
+$font_1: sans-serif;
+$font_2: Puritan;
+$font_3: Philosopher;
+$font_4: Anonymous Pro;
+$font_5: Bitstream Vera Sans;
+$font_6: Monaco;
+$font_7: Courier;
+$font_8: mono;
+
+html {
+    margin: 20px;
+}
+body {
+    background-image: url('/images/square_bg.png');
+    font-family: $font_0, $font_1;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 12px;
+    width: 1024px;
+    > {
+        header {
+            display: block;
+            padding-top: 30px;
+            margin-bottom: 20px;
+            > h1 {
+                font-size: 60px;
+                font-family: $font_2, $font_1;
+                font-weight: normal;
+                display: inline;
+                margin: 0;
+            }
+        }
+        footer {
+            font-family: $font_3, $font_1;
+            clear: both;
+            text-align: left;
+            margin-left: 10px;
+            font-style: italic;
+            font-size: 16px;
+            color: $color_suva_gray_approx;
+        }
+    }
+}
+header {
+    display: block;
+}
+footer {
+    display: block;
+}
+section {
+    display: block;
+}
+article {
+    display: block;
+}
+aside {
+    display: block;
+}
+a {
+    color: #FF6600;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+blockquote {
+    font-style: italic;
+}
+code {
+    font-family: $font_4, $font_5, $font_6, $font_7, $font_8;
+    font-size: 16px;
+    padding: 0 3px 3px 0;
+}
+h1 {
+    font-weight: normal;
+    display: inline;
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+}
+h2 {
+    font-weight: normal;
+    font-size: 25px;
+    font-weight: bold;
+}
+h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 18px;
+}
+h4 {
+    font-weight: normal;
+}
+h5 {
+    color: $color_blaze_orange_approx;
+    font-style: italic;
+}
+hr {
+    color: #FF6600;
+    background-color: #FF6600;
+    height: 2px;
+}
+img {
+    border: 0;
+}
+pre {
+    padding: 20px;
+}
+.date {
+    font-size: 18px;
+    font-style: italic;
+    margin-right: 30px;
+}
+#articles {
+    display: block;
+    float: left;
+    width: 650px;
+    h1 {
+        font-size: 25px;
+    }
+}
+
+#archives {
+    clear: both;
+    padding-top: 10px;
+}
+
+#about {
+    float: left;
+    width: 350px;
+    div {
+        &#social-media {
+            margin-left: 30px;
+            img {
+                float: left;
+            }
+        }
+        > p {
+            font-family: $font_3, $font_1;
+            font-size: 16px;
+            float: left;
+            margin-left: 40px;
+        }
+    }
+}
+
+.more {
+    margin-top: -10px;
+    margin-right: 30px;
+    font-style: italic;
+    text-align: right;
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.comments {
+    font-size: 18px;
+}
+
+.post {
+    margin-bottom: 30px;
+    header {
+        margin-bottom: 40px;
+        float: left;
+    }
+    &:last-child {
+        margin-bottom: 10px;
+    }
+    #title {
+        float: left;
+        width: 953px;
+        h1 {
+            font-size: 40px;
+        }
+    }
+    #rss-icon {
+        float: left;
+    }
+    .content {
+        margin-bottom: 50px;
+        IMG {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+div#subtitle {
+    margin: 0;
+    padding: 0;
+    color: $color_suva_gray_approx;
+    font-style: italic;
+    font-weight: normal;
+}
+
+div#logo, div#divider {
+    float: left;
+    width: 320px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
