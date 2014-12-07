@@ -2,22 +2,52 @@
 layout: default
 ---
 
-<div class="home">
+<section id="articles">
+  {% for post in site.posts limit:5 %}
+    <article class="teaser">
+      <header>
+        <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+        <div class="date">
+          {% assign d = post.date | date: "%-d" %}
+          {{ post.date | date: "%B" }}
+          {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+          {{ post.date | date: "%Y" }}
+        </div>
+      </header>
+      <section class="summary">
+        {{ post.excerpt }}
+      </section>
+      <div class="more"><a href="{{ post.url | prepend: site.baseurl }}">moar &raquo;</a></div>
+    </article>
+    <hr />
+  {% endfor %}
+</section>
 
-  <h1 class="page-heading">Posts</h1>
+<aside id='about'>
+  <div id='social-media'>
+    <a href="http://feeds.feedburner.com/{{site.feedburner_username}}" target="_blank" title="RSS"><img src="/images/rss.png" width="64" height="64" alt="RSS" /></a>
+    <a href="http://feeds.feedburner.com/{{site.feedburner_username}}" target="_blank" title="Feedburner"><img src="/images/feedburner.png" width="64" height="64" alt="Feedburner" /></a>
+    <a href="http://twitter.com/#!/{{site.twitter_username}}" target="_blank" title="Twitter"><img src="/images/twitter.png" width="64" height="64" alt="Twitter" /></a>
+    <a href="http://linkedin.com/in/{{site.linkedin_username}}" target="_blank" title="LinkedIn"><img src="/images/linkedin.png" width="64" height="64" alt="LinkedIn" /></a>
+    <a href="http://www.facebook.com/{{site.facebook_username}}" target="_blank" title="Facebook"><img src="/images/facebook.png" width="64" height="64" alt="Facebook"  /></a>
+    <hr />
+  </div>
+  <div id="bio">
+    {{ site.bio }}
+  </div>
+  <div id='divider'>
+    <hr />
+  </div>
+  <div id='logo'>
+    <a href='http://sage.house'><img src='/images/logo.png' alt='Sage House' /></a>
+    <hr />
+  </div>
+</aside>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+<section id="archives">
+  <ul>
+    {% for post in site.posts offset:5 %}
+      <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+  <ul>
+</section>
