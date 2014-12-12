@@ -27,7 +27,7 @@ To run all the examples, you'll need to install one other gem called Nokogiri. N
 
 The example contains four pretty task that are most likely common on most .NET applications. Here's the "build" task in the rakefile:
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 desc "Build the solution in .Net 4.0"
 msbuild :build do |msb|
   msb.properties :configuration => :Debug

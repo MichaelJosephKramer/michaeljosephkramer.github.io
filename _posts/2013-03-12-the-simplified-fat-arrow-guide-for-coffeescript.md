@@ -27,7 +27,7 @@ Context in CoffeeScript, and JavaScript, generally follows a few simple rules. T
 
 Rule #3 starts to get a little tricky when callbacks are passed around:
 
-{% highlight coffeescript %}
+{% highlight coffeescript linenos %}
 class Bartender
     drinkName: -> 'Manhattan'
 

@@ -12,7 +12,7 @@ In many languages, like JavaScript, you'll often see something like "<code>array
 
 In this code, we have an array of object literals written in CoffeeScript:
 
-{% highlight coffeescript %}
+{% highlight coffeescript linenos %}
 characters = [
     name: 'Jules Winnfield'
     occupation: 'Gangster'
