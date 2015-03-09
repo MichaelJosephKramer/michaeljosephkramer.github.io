@@ -12,7 +12,7 @@ In many languages, like JavaScript, you'll often see something like "<code>array
 
 In this code, we have an array of object literals written in CoffeeScript:
 
-{% highlight coffeescript linenos %}
+~~~coffeescript
 characters = [
     name: 'Jules Winnfield'
     occupation: 'Gangster'
@@ -40,8 +40,8 @@ names = (character.name for character in characters)
 
 # with no parenthesis, names is equal to 'Marsellus Wallace'
 names = character.name for character in characters
+~~~
 
-{% endhighlight %}
 
 On line 23, you'll see the loop. It simply rolls over each object in the array and returns the name of the character. The parenthesis capture the result of each iteration in an array, so the value of names is actually an array of the names in each object. The trick lies in the parathesis though; if you don't have them, names will just equal the name from the last loop iteration, which in this case would equal 'Marsellus Wallace'.
 

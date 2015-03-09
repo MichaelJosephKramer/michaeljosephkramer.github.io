@@ -27,7 +27,7 @@ Context in CoffeeScript, and JavaScript, generally follows a few simple rules. T
 
 Rule #3 starts to get a little tricky when callbacks are passed around:
 
-{% highlight coffeescript linenos %}
+~~~coffeescript
 class Bartender
     drinkName: -> 'Manhattan'
 
@@ -48,7 +48,7 @@ bartender = new Bartender()
 callbacker(bartender.bourbonCallback)
 callbacker(bartender.ryeCallback)
 callbacker(bartender.oldCrowCallback)
-{% endhighlight %}
+~~~
 
 In this example, you'll get an nasty message when you change the fat arrows to thin arrows in the `Bartender` class. Feel free to play with it here: [http://jsfiddle.net/uxCCD/7/](http://jsfiddle.net/uxCCD/7/ "http://jsfiddle.net/uxCCD/7/")
 

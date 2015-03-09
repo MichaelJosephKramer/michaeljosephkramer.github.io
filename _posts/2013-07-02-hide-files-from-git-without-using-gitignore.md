@@ -9,11 +9,27 @@ The last great unexplored region of git is the .git directory. Once you start to
 
 If you navigate into your .git directory, then into the info directory, you'll see a file called 'exclude'. If you open it up, you'll see something like this:
 
-![.git exclude file][before]
+~~~ruby
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+~~~
 
 That should look familiar, like, say, a .gitignore. It works pretty much like a .gitignore too
 
-![.git exclude file][after]
+~~~ruby
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+.ruby-version
+.ruby-gemset
+~~~
 
 ## That's fantastic! Why would I want to do that? Um, .gitignore?
 

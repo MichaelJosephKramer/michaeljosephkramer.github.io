@@ -27,7 +27,7 @@ To run all the examples, you'll need to install one other gem called Nokogiri. N
 
 The example contains four pretty task that are most likely common on most .NET applications. Here's the "build" task in the rakefile:
 
-{% highlight ruby linenos %}
+~~~ruby
 desc "Build the solution in .Net 4.0"
 msbuild :build do |msb|
   msb.properties :configuration => :Debug
@@ -35,7 +35,7 @@ msbuild :build do |msb|
   msb.verbosity = 'quiet'
   msb.solution = "FizzBuzz.sln"
 end
-{% endhighlight %}
+~~~
 
 To run this task, just type <code>rake build</code> in the directory with the rakefile. Any given directory can only contain one rakefile, usually named "rakefile" with no extension, although the file name is [flexible][casing].
 

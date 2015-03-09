@@ -15,10 +15,13 @@ feedburner_username:  michaeljosephkramer
 disqus_username:  michaeljosephkramer
 google_analytics_id: UA-592651-4
 clicky_id: 66487006
+highlighter: pygments
+safe: true
+lsi: false
 
 # Build settings
-markdown: redcarpet
-highligher: rouge
+future: false
 permalink: pretty
+markdown: redcarpet
 redcarpet:
   extensions: [smart]
