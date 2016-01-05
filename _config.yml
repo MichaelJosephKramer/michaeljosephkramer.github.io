@@ -2,7 +2,7 @@
 title: Michael Joseph Kramer
 email: michael@sage.house
 bio: &bio >
-  <p>Michael Joseph Kramer is a passionate software developer focusing on quality, testing, and agile practices. Michael has almost 15 years of experience creating applications on a wide variety of platforms, and he has worked as both an IT professional and a consultant. He is currently an independent consultant at Sage House, LLC specializing in JavaScript, CoffeeScript, Ruby, and Agile Practices.</p><p>He lives in Columbus, Ohio, and is always happy to talk about college football, Vim, and whisky.</p>
+  <p>Michael Joseph Kramer is a passionate software developer focusing on quality, testing, and agile practices. Michael has almost 15 years of experience creating applications on a wide variety of platforms, and he has worked as both an IT professional and a consultant.</p><p>He is currently a Staff Engineer in the Office of the CTO at FireEye specializing in JavaScript, CoffeeScript, Ruby, and Agile Practices. The opinions here are his own.</p><p>He lives in Columbus, Ohio, and is always happy to talk about college football, Vim, and whisky.</p>
 description: *bio
 baseurl: ""
 url: "http://michaeljosephkramer.com"
