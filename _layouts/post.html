@@ -3,36 +3,38 @@ layout: default
 ---
 <article class="post">
 
-  <header>
-
-    <div id="title">
+  <div class="row">
+    <div class="col-sm-11">
       <h1>{{ page.title }}</h1>
       <div class="date">Posted on
         {% assign d = page.date | date: "%-d" %}
         {{ page.date | date: "%B" }}
-        {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+{% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
         {{ page.date | date: "%Y" }}
       </div>
     </div>
 
-    <div id="rss-icon" >
+
+    <div class="col-sm-1">
       <a href="{{ site.url }}/feed.xml" target="_blank" title="RSS"><img src="/images/rss-icon.png" width="64" height="64" alt="RSS" /></a>
     </div>
 
-  </header>
+  </div>
 
-  <section class="content" style="clear:both">
-    {{ content }}
-  </section>
+  <div class="row">
+    <div class="col-sm-12">
+      {{ content }}
+    </div>
+  </div>
 
   <hr />
 
-  <section class="comments">
+  <div class="mt-5">
     <h5>Useful Internet Comments!</h5>
     <div id="disqus_thread"></div>
     <script type="text/javascript" src="http://disqus.com/forums/{{site.disqus_username}}/embed.js"> </script>
     <noscript><a href="http://{{site.disqus_username}}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
+  </div>
 
 </article>

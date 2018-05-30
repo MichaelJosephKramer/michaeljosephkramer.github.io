@@ -2,52 +2,46 @@
 layout: default
 ---
 
-<section id="articles">
-  {% for post in site.posts limit:5 %}
-    <article class="teaser">
-      <header>
-        <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+<div class='row'>
+  <div class='col-sm-8'>
+    {% for post in site.posts limit:5 %}
+      <div class='summary'>
+        <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
         <div class="date">
           {% assign d = post.date | date: "%-d" %}
           {{ post.date | date: "%B" }}
-          {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+  {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
           {{ post.date | date: "%Y" }}
         </div>
-      </header>
-      <section class="summary">
         {{ post.excerpt }}
-      </section>
-      <div class="more"><a href="{{ post.url | prepend: site.baseurl }}">moar &raquo;</a></div>
-    </article>
-    <hr />
-  {% endfor %}
-</section>
+        <div class="more">
+          <a href="{{ post.url | prepend: site.baseurl }}">moar &raquo;</a>
+        </div>
+      </div>
+      <hr />
+    {% endfor %}
+  </div>
 
-<aside id='about'>
-  <div id='social-media'>
+  <div class='col-sm-4 text-center'>
     <a href="http://github.com/michaeljosephkramer" target="_blank" title="RSS"><img src="/images/github-icon.png" width="64" height="64" alt="Github" /></a>
     <a href="http://twitter.com/#!/{{site.twitter_username}}" target="_blank" title="Twitter"><img src="/images/twitter-icon.png" width="64" height="64" alt="Twitter" /></a>
     <a href="http://linkedin.com/in/{{site.linkedin_username}}" target="_blank" title="LinkedIn"><img src="/images/linkedin-icon.png" width="64" height="64" alt="LinkedIn" /></a>
     <a href="http://www.facebook.com/{{site.facebook_username}}" target="_blank" title="Facebook"><img src="/images/facebook-icon.png" width="64" height="64" alt="Facebook"  /></a>
     <a href="{{site.url}}/feed.xml" target="_blank" title="RSS"><img src="/images/rss-icon.png" width="64" height="64" alt="Feedburner" /></a>
     <hr />
-  </div>
-  <div id="bio">
-    {{ site.bio }}
-  </div>
-  <div id='divider'>
+    <div class='text-left my-4' id="bio">
+      {{ site.bio }}
+    </div>
     <hr />
-  </div>
-  <div id='logo'>
     <a href='http://sage.house'><img src='/images/logo.png' alt='Sage House' /></a>
     <hr />
   </div>
-</aside>
+</div>
 
-<section id="archives">
+<div class='pt-1'>
   <ul>
     {% for post in site.posts offset:5 %}
       <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
     {% endfor %}
   <ul>
-</section>
+</div>
