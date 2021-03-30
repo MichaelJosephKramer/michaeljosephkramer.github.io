@@ -5,7 +5,7 @@ bio: &bio >
   <p>Michael Joseph Kramer is a passionate software developer focusing on quality, testing, and agile practices. Michael has nearly 20 years of experience creating applications on a wide variety of platforms, and he has worked as both an IT professional and a consultant.</p><p>He is currently a Software Engineer at a car insurance startup, specializing in Ruby, JavaScript, Mobile Development, and Agile Practices. The opinions here are his own.</p><p>He lives in Columbus, Ohio, and is always happy to talk about college football, Vim, and whisky.</p>
 description: *bio
 baseurl: ""
-url: "http://michaeljosephkramer.com"
+url: "https://michaeljosephkramer.com"
 encoding: utf-8
 twitter_username: michaelkramer
 github_username:  michaeljosephkramer
